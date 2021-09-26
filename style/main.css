@@ -1,0 +1,118 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+} 
+
+.space {
+background-image: url("../img/space.png");
+background-repeat:no-repeat;
+background-size: cover;
+overflow: hidden;
+}
+
+.planet-area {
+   position: relative;
+   left: -10px;
+   bottom: -20px;
+}
+
+.rocket {
+    position: relative;
+    left: -430px;
+    top: -450px;
+    transform: rotate(30deg);
+    width: 300px;
+}
+
+.control-panel {
+    position: relative;
+    right: -950px;
+    top: -700px;
+    display:inline-flex;
+    flex-direction:column;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+}
+
+.control-panel__inner {
+    padding: 30px 0;
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    border: 10px dashed rgb(255, 230, 7);
+}
+
+.password, .button-ok{
+    display: flex;
+    margin: 0 auto;
+}
+
+.password{
+    background-color: rgb(63, 60, 60);
+    border: 3px solid rgb(255, 230, 7);
+    border-radius: 5px;
+}
+
+.password::placeholder{
+    color: rgb(255, 230, 7);
+}
+
+.button-ok{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: -120px;
+    top: -25px;
+    background-color: rgb(255, 230, 7);
+    border-radius: 30%;
+    text-align: center;
+    cursor: pointer;
+    width: 45px;
+    height: 25px;
+}
+
+.check-buttons{
+    display: flex;
+    margin: 20px;
+    justify-content: space-around;
+}
+
+.levers{
+    display: flex;
+ margin: 80px 0px;  
+ flex-basis:content; 
+}
+
+.lever {
+    transform: rotate(270deg);
+}
+
+.launch-button {
+    display: flex;
+    justify-content: center;
+  width: 120px;
+  margin: 0 auto;
+  height: 80px;
+  background-color: red;
+  border: 3px solid white;
+  border-radius: 60px;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
