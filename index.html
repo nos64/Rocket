@@ -6,70 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Space</title>
     <link rel="stylesheet" href="./style/main.css"> 
-    <script>
-          function validate() {
-               // let validPassword = "TrustNo1";
-               let validPassword = "1";
-               let verifiPassword = document.querySelector(".password").value;
-               if (verifiPassword === validPassword){
-                    return true;
-               }
-          }
-          function unlock () {
-               if (validate()){
-                    let checkboxes = document.querySelectorAll(".checkbox");
-                    let levers = document.querySelectorAll(".lever");
-                    for (let i = 0, length = checkboxes.length; i < length; i++){
-                         checkboxes[i].disabled = false;
-                    }
-                    for (let i = 0, length = levers.length; i < length; i++){
-                         levers[i].disabled = false;
-                    }
-     
-                    document.querySelector(".button-ok").disabled = true;
-                    document.querySelector(".password").disabled = true;
-                    }  else {
-                    alert("Enter Valid password")
-               }
-          }
-          // function unlockLaunch () {
-               function fun1() {
-                    // let ch1 = document.querySelector(".checkbox");
-                    // let ch1 = document.getElementById("ch2");
-                    // let ch1 = document.getElementById("ch3");
-                    // let ch1 = document.getElementById("ch4");
-                    // let ch1 = document.getElementById("ch5");
-                    // let ch1 = document.getElementById("ch6");
-                    // let ran1 = document.getElementById("ran1");
-               if (ch1.checked && ch2.checked && ch3.checked &&
-                ch4.checked && ch5.checked && ch6.checked &&
-                ran1.value==="100" && ran2.value==="100" &&
-                ran3.value==="100" && ran4.value==="100" &&
-                ran5.value==="100"){
-                    document.querySelector(".launch-button").disabled = false;
-                    document.querySelector(".launch-button").style.backgroundColor = "green";
-                    console.log("good")
-               }
-               }
-               function rocketLaunch () {
-                    let rocket = document.querySelector(".rocket");
-                    rocket.animate([
-        { // current position of your rocket
-            left: '-430px',
-            top: '-450px'
-        },
-        { //  final position of your rocket
-            left: '-100px',
-            top: '-900px'
-        }
-    ], {
-        // timing options
-        duration: 2000,
-        iterations: 1
-    })
-               }
-       
-    </script>
 </head>
 <body>
    <div class="space">
@@ -80,25 +16,50 @@
         <div class="control-panel">
               <div class="control-panel__inner">
                     <input class="password" type="password" placeholder="Enter passord to unlock">
-                    <input class="button-ok" type="button"value="OK" onclick="unlock ()">
+                    <button class="button-ok">OK</button>
                     <div class="check-buttons"> 
-                         <input type="checkbox" id="ch1" class="checkbox" onchange="fun1()" disabled>
-                         <input type="checkbox" id="ch2" class="checkbox" onchange="fun1()" disabled>
-                         <input type="checkbox" id="ch3" class="checkbox" onchange="fun1()" disabled>
-                         <input type="checkbox" id="ch4" class="checkbox" onchange="fun1()" disabled>
-                         <input type="checkbox" id="ch5" class="checkbox" onchange="fun1()" disabled>
-                         <input type="checkbox" id="ch6" class="checkbox" onchange="fun1()" disabled>
+                    <input type="checkbox" title="" id="ch1" class="checkbox" disabled>Power
+                    <input type="checkbox" title="Egnition" id="ch2" class="checkbox" disabled>Egnition  
                     </div>
                     <div class="levers">
-                         <input type="range" id="ran1" class="lever" min="0" max="100" onchange="fun1()" disabled>
-                         <input type="range" id="ran2" class="lever" min="0" max="100" onchange="fun1()" disabled>
-                         <input type="range" id="ran3" class="lever" min="0" max="100" onchange="fun1()" disabled>
-                         <input type="range" id="ran4" class="lever" min="0" max="100" onchange="fun1()" disabled>
-                         <input type="range" id="ran5" class="lever" min="0" max="100" onchange="fun1()" disabled>
+                         <input type="range" id="ran1" title="Egnition 1" class="lever" min="0" max="100" disabled>
+                         <label for="ran1">Egnition 1</label>
+                         <input type="range" id="ran2" title="Egnition 2" class="lever" min="0" max="100" disabled>
+                         <label for="ran2">Egnition 2</label>
+                         <input type="range" title="Speed" id="ran3" class="lever" list="tickmarks" min="0" max="100" disabled>
+                         <label for="ran3">Speed</label>
+                         <datalist id="tickmarks">
+                              <option value="0">
+                              <option value="10">
+                              <option value="20">
+                              <option value="30">
+                              <option value="40">
+                              <option value="50">
+                              <option value="60">
+                              <option value="70">
+                              <option value="80">
+                              <option value="90">
+                              <option value="100">
+                              </datalist>
+                         <input type="range" title="Angile" id="ran4" class="lever" list="tickmarks" min="0" max="100" disabled>
+                         <label for="ran4">Angile</label>
+                              <option value="0">
+                              <option value="10">
+                              <option value="20">
+                              <option value="30">
+                              <option value="40">
+                              <option value="50">
+                              <option value="60">
+                              <option value="70">
+                              <option value="80">
+                              <option value="90">
+                              <option value="100">
+                              </datalist>
                     </div>
-                    <input class="launch-button" type="button" value="Launch" disabled onclick="rocketLaunch ()">
+                    <input class="launch-button" type="button" value="Launch" disabled>
                </div> 
           </div> 
    </div>
+   <script src="app.js" type="module"></script>
 </body>
 </html>
